@@ -16,11 +16,11 @@ class WEBrick::HTTPResponse
   def send_response(socket)
     send(socket) unless fail_silently?
   end
-  
+
   def fail_silently?
     @fail_silently
   end
-  
+
   def fail_silently
     @fail_silently = true
   end
@@ -49,15 +49,15 @@ class BasicServlet < WEBrick::HTTPServlet::AbstractServlet
   def do_GET(req, res)
     prevent_caching(res)
     res['Content-Type'] = "text/plain"
-    
+
     req.query.each do |k, v|
       res[k] = v unless k == 'responseBody'
     end
     res.body = req.query["responseBody"]
-    
+
     raise WEBrick::HTTPStatus::OK
   end
-  
+
   def do_POST(req, res)
     do_GET(req, res)
   end

@@ -61,5 +61,5 @@ class Browser
 
   def to_s
     name
-  end  
+  end
 end

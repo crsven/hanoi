@@ -8,15 +8,15 @@ class TestResults
     @errors     = query['errors'].to_i
     @filename   = filename
   end
-  
+
   def error?
     @errors > 0
   end
-  
+
   def failure?
     @failures > 0
   end
-  
+
   def to_s
     return "E" if error?
     return "F" if failure?

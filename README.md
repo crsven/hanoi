@@ -3,7 +3,7 @@
 ## Installation
 
     (sudo) gem install hanoi
-  
+
 ## Crash Course
 
     hanoi         # prepare the target directory
@@ -61,7 +61,7 @@ By convention, your `test/javascript` folder **should reflect** the structure of
 appending the `_test.js` suffix to each test case and the `_fixtures.html` to each fixture file.
 
 Example:
-  
+
     src/
       directory_a/
         directory_b/
